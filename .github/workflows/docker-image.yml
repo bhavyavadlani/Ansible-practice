@@ -32,7 +32,7 @@ jobs:
           context: ./PetBackend   #chnage this
           file: ./PetBackend/backend.Dockerfile  #change this 
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/ansible-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/ansible-Petbackend:latest
           platforms: linux/arm64, linux/amd64
 
       # Step 5 — Build & Push Frontend Image
@@ -42,5 +42,5 @@ jobs:
           context: ./PetFrontend #change this 
           file: ./PetFrontend/frontend.Dockerfile #chbage this 
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/ansible-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/ansible-Petfrontend:latest
           platforms: linux/arm64, linux/amd64
